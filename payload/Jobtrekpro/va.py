@@ -5,7 +5,7 @@ import time
 # === CONFIGURATION ===
 # Your API endpoint and admin token
 API_URL = "https://api.jobtrekpro.com/api/va"
-ADMIN_TOKEN = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJkY2YwZGUxNS1lNDk4LTRjMzQtOGQ5OC04N2UwOTIwNTcyNTEiLCJlbWFpbCI6IjEybm92QHlvcG1haWwuY29tIiwicm9sZSI6Im93bmVyIiwiaWF0IjoxNzYyOTIzMzU0LCJleHAiOjE3NjMwMDk3NTR9.NEsuvVXTVqJ7r-3i_TesXEwhtcLCoUpoQKIGgYmTT-A"  # Replace with your real admin token
+ADMIN_TOKEN = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIyMmMyZjA2Ny03OGJhLTQ1NmQtODU2Yy1mMmMzNzc4YmNjNWUiLCJlbWFpbCI6InRlc3RAeW9wbWFpbC5jb20iLCJyb2xlIjoib3duZXIiLCJpYXQiOjE3NjMwMjkwMDQsImV4cCI6MTc2MzExNTQwNH0.ohdkrHCQS8WDSFYCkrIW7vlCFdVwZ4lttUXgf61jM8A"  # Replace with your real admin token
 BASE_EMAIL = "va@yopmail.com"  # Yopmail for temporary clients
 
 # Request headers
@@ -15,8 +15,10 @@ headers = {
 }
 
 # Random name generation
-first_names = ["Chelsea", "Alex", "Jordan", "Taylor", "Morgan", "Casey", "Riley", "Jamie"]
+first_names = ["Chelsea", "Alex", "Jordan",
+               "Taylor", "Morgan", "Casey", "Riley", "Jamie"]
 last_names = ["Barber", "Smith", "Johnson", "Lee", "Brown", "Clark", "Adams"]
+
 
 def generate_client(i):
     """Generates a client payload with random data"""
@@ -33,10 +35,11 @@ def generate_client(i):
         "first_name": first,
         "last_name": last,
         "email": email,
-        "mobile_number": f"+1 (800) {random.randint(1000000, 9999999)}",  # Random phone number
-       # "address": "1234 Placeholder St",  # Placeholder address
-       # "notes": "Sample client information",  # Placeholder notes
-        
+        # Random phone number
+        "mobile_number": f"+1 (800) {random.randint(1000000, 9999999)}",
+        # "address": "1234 Placeholder St",  # Placeholder address
+        # "notes": "Sample client information",  # Placeholder notes
+
     }
 
     return payload
@@ -51,10 +54,10 @@ def create_clients(n=500):
             # Send the POST request to create a client
             response = requests.post(
                 API_URL, json=payload, headers=headers, timeout=10)
-            
+
             if response.status_code in [200, 201]:
                 success += 1
-                print(f"[{i}] ✅ Created client: {payload['email']}")
+                print(f"[{i}] ✅ Created VA: {payload['email']}")
             else:
                 fail += 1
                 print(f"[{i}] ❌ Failed ({response.status_code}): {response.text}")
@@ -69,4 +72,4 @@ def create_clients(n=500):
 
 
 if __name__ == "__main__":
-    create_clients(104)  # Create 500 clients for testing
+    create_clients(11)  # Create 500 clients for testing

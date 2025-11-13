@@ -61,7 +61,7 @@ def create_clients(n=500):
             print(f"[{i}] :warning: Exception: {e}")
         # Optional: prevent backend rate-limiting
         time.sleep(0.1)
-    print(f"\n:white_tick: Success: {success} | :x: Failed: {fail}")
+    print(f"\n:created client: Success: {success} | :x: Failed: {fail}")
 
 
 if __name__ == "__main__":
