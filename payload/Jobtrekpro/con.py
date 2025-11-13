@@ -7,7 +7,7 @@ import time
 API_URL = "https://api.jobtrekpro.com/api/contractors"
 ADMIN_TOKEN = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIzMDkxOWZmOS0yNTQ0LTQ4NGMtOWFmOS04NTg5MzM2ZjIwNzgiLCJlbWFpbCI6IjEzbm92QHlvcG1haWwuY29tIiwicm9sZSI6Im93bmVyIiwiaWF0IjoxNzYyOTUxNDc0LCJleHAiOjE3NjMwMzc4NzR9.OP2UCBL4xAMgob0kX3gcW0iXH3Zi0JwMP4JPHeUwEEg"              # ← replace with your real admin token
 # ← base inbox (check on yopmail.com/?testuser)
-BASE_EMAIL = "random@yopmail.com"
+BASE_EMAIL = "tags@yopmail.com"
 
 headers = {
     "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIzMDkxOWZmOS0yNTQ0LTQ4NGMtOWFmOS04NTg5MzM2ZjIwNzgiLCJlbWFpbCI6IjEzbm92QHlvcG1haWwuY29tIiwicm9sZSI6Im93bmVyIiwiaWF0IjoxNzYyOTUxNDc0LCJleHAiOjE3NjMwMzc4NzR9.OP2UCBL4xAMgob0kX3gcW0iXH3Zi0JwMP4JPHeUwEEg",
@@ -23,6 +23,10 @@ last_names = ["Barber", "Smith", "Johnson", "Lee", "Brown", "Clark", "Adams"]
 # 🧰 Add your possible specializations here
 specializations_list = ["garage", "plumbing", "electrical", "hvac",
                         "landscaping", "carpentry", "painting", "roofing", "cleaning"]
+tags_list = ["urgent", "vip", "new", "experienced",
+             "part time", "full time", "ontime"]
+colors_list = ["#0055ff", "#ff0000", "#00cc00",
+               "#ffaa00", "#cc00ff", "#00cccc", "#ff6600", "#0099ff"]
 
 
 def generate_contractor(i):
@@ -31,6 +35,8 @@ def generate_contractor(i):
     # Select only 1 random specialization
     specialization = random.choice(specializations_list)
     specializations = [specialization]
+    tag = random.choice(tags_list)
+    tag_color = random.choice(colors_list)
 
     # YOPmail unique alias — all deliver to same inbox
     base_name = BASE_EMAIL.split("@")[0]
@@ -50,7 +56,7 @@ def generate_contractor(i):
         # 🎯 Random specializations
         "specializations": specializations,
         "status": "pending",
-        "tags": [{"name": "urgent", "color": "#0055ff"}],
+        "tags": [{"name": tag, "color": tag_color}],
         "hasVehicle": False,
         "ownsTools": False,
         "yearsExperience": 10,
@@ -90,4 +96,4 @@ def create_contractors(n=500):
 
 
 if __name__ == "__main__":
-    create_contractors(3)
+    create_contractors(16)
