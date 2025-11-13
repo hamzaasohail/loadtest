@@ -5,8 +5,8 @@ import time
 # === CONFIGURATION ===
 # ← replace with your API endpoint for clients
 API_URL = "https://api.jobtrekpro.com/api/clients"
-ADMIN_TOKEN = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJkY2YwZGUxNS1lNDk4LTRjMzQtOGQ5OC04N2UwOTIwNTcyNTEiLCJlbWFpbCI6IjEybm92QHlvcG1haWwuY29tIiwicm9sZSI6Im93bmVyIiwiaWF0IjoxNzYyODgxMzEyLCJleHAiOjE3NjI5Njc3MTJ9.Er2gF1swESD5TeTNBegyEp-C7QdU6EGz2DMlIsQQp54"  # ← replace with your real admin token
-BASE_EMAIL = "user@yopmail.com"  # Yopmail for temporary clients
+ADMIN_TOKEN = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIzMDkxOWZmOS0yNTQ0LTQ4NGMtOWFmOS04NTg5MzM2ZjIwNzgiLCJlbWFpbCI6IjEzbm92QHlvcG1haWwuY29tIiwicm9sZSI6Im93bmVyIiwiaWF0IjoxNzYyOTUyNzIwLCJleHAiOjE3NjMwMzkxMjB9.9qAaSUHcgCOwn7By0osujfweRMp0kAk3dEpOYxkZUhQ"  # ← replace with your real admin token
+BASE_EMAIL = "client@yopmail.com"  # Yopmail for temporary clients
 
 headers = {
     "Authorization": f"Bearer {ADMIN_TOKEN}",
@@ -14,8 +14,10 @@ headers = {
 }
 
 # Random names, email generation
-first_names = ["Chelsea", "Alex", "Jordan", "Taylor", "Morgan", "Casey", "Riley", "Jamie"]
+first_names = ["Chelsea", "Alex", "Jordan",
+               "Taylor", "Morgan", "Casey", "Riley", "Jamie"]
 last_names = ["Barber", "Smith", "Johnson", "Lee", "Brown", "Clark", "Adams"]
+
 
 def generate_client(i):
     first = random.choice(first_names)
@@ -32,7 +34,7 @@ def generate_client(i):
         "phone": f"+1 (800) {random.randint(1000000, 9999999)}",
         "address": "Voluptatem Dignissi",  # Placeholder address
         "notes": "Lorem ipsum dolor sit amet.",  # Placeholder notes
-         "tags": ["urgent"],   # Optional tags
+        "tags": ["urgent"],   # Optional tags
     }
 
     return payload

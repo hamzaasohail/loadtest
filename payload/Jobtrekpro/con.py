@@ -7,7 +7,7 @@ import time
 API_URL = "https://api.jobtrekpro.com/api/contractors"
 ADMIN_TOKEN = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIzMDkxOWZmOS0yNTQ0LTQ4NGMtOWFmOS04NTg5MzM2ZjIwNzgiLCJlbWFpbCI6IjEzbm92QHlvcG1haWwuY29tIiwicm9sZSI6Im93bmVyIiwiaWF0IjoxNzYyOTUxNDc0LCJleHAiOjE3NjMwMzc4NzR9.OP2UCBL4xAMgob0kX3gcW0iXH3Zi0JwMP4JPHeUwEEg"              # ← replace with your real admin token
 # ← base inbox (check on yopmail.com/?testuser)
-BASE_EMAIL = "con@yopmail.com"
+BASE_EMAIL = "random@yopmail.com"
 
 headers = {
     "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIzMDkxOWZmOS0yNTQ0LTQ4NGMtOWFmOS04NTg5MzM2ZjIwNzgiLCJlbWFpbCI6IjEzbm92QHlvcG1haWwuY29tIiwicm9sZSI6Im93bmVyIiwiaWF0IjoxNzYyOTUxNDc0LCJleHAiOjE3NjMwMzc4NzR9.OP2UCBL4xAMgob0kX3gcW0iXH3Zi0JwMP4JPHeUwEEg",
@@ -20,9 +20,17 @@ first_names = ["Chelsea", "Alex", "Jordan",
 last_names = ["Barber", "Smith", "Johnson", "Lee", "Brown", "Clark", "Adams"]
 
 
+# 🧰 Add your possible specializations here
+specializations_list = ["garage", "plumbing", "electrical", "hvac",
+                        "landscaping", "carpentry", "painting", "roofing", "cleaning"]
+
+
 def generate_contractor(i):
     first = random.choice(first_names)
     last = random.choice(last_names)
+    # Select only 1 random specialization
+    specialization = random.choice(specializations_list)
+    specializations = [specialization]
 
     # YOPmail unique alias — all deliver to same inbox
     base_name = BASE_EMAIL.split("@")[0]
@@ -39,7 +47,8 @@ def generate_contractor(i):
         "hourlyRate": 10,
         "serviceRadius": 25,
         "skillLevel": "beginner",
-        "specializations": ["Garage"],
+        # 🎯 Random specializations
+        "specializations": specializations,
         "status": "pending",
         "tags": [{"name": "urgent", "color": "#0055ff"}],
         "hasVehicle": False,
@@ -81,4 +90,4 @@ def create_contractors(n=500):
 
 
 if __name__ == "__main__":
-    create_contractors(2)
+    create_contractors(3)
