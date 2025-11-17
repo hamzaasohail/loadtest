@@ -3,8 +3,8 @@ import { check, sleep } from 'k6';
 export const options = {
 
     stages: [
-        { duration: '1m', target: 50 },
-        { duration: '3m', target: 100 },
+        { duration: '30s', target: 50 },
+        { duration: '20s', target: 100 },
         { duration: '20s', target: 150 },
         { duration: '10s', target: 300 },
     ],
@@ -37,6 +37,9 @@ export default function (data) {
 
     const jobRes = http.get('https://api.jobtrekpro.com/api/jobs', { headers });
     check(apiRes, { 'jobs api status 200': (r) => r.status === 200 });
+
+    const contractorRes = http.get('https://api.jobtrekpro.com/api/contractors', { headers });
+    check(contractorRes, { 'contractors api status 200': (r) => r.status === 200 });
 
 
 
