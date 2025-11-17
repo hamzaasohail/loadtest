@@ -47,7 +47,7 @@ TAG_COLORS = [
 # Specializations
 SPECIALIZATIONS = [
     "electrical", "plumbing", "hvac", "carpentry", "painting",
-    "roofing", "flooring", "landscaping", "garage"
+    "roofing", "cleaning", "landscaping"
 ]
 
 # Skill levels
