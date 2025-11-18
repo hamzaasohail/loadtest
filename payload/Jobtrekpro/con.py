@@ -5,8 +5,8 @@ from datetime import datetime, timedelta
 
 # === CONFIGURATION ===
 API_URL = "https://api.jobtrekpro.com/api/contractors"
-ADMIN_TOKEN = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJkMzZhN2UyZi01OTg1LTQ5YTYtYTg0Ny01YzdhMjQ3MTk3MzkiLCJlbWFpbCI6IjE3bm92QHlvcG1haWwuY29tIiwicm9sZSI6Im93bmVyIiwiaWF0IjoxNzYzMzU5ODE5LCJleHAiOjE3NjM0NDYyMTl9.PouXhCU6pqkcSHzlgplrkyONGO68-LVoIXQxwchxIns"
-BASE_EMAIL = "jest@yopmail.com"
+ADMIN_TOKEN = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjNDFlMzg5NC0zNDUxLTRlNzEtODgyMS02MDk2NDczYjAzNmIiLCJlbWFpbCI6Im1hbnVhbHRlc3RpbmdAeW9wbWFpbC5jb20iLCJyb2xlIjoib3duZXIiLCJpYXQiOjE3NjM0NDIwMjksImV4cCI6MTc2MzUyODQyOX0.WsB-bT-DGSdMx-Bq2CMG40mH0pwzRHvqYQ3yukwVAuc"
+BASE_EMAIL = "cont@yopmail.com"
 
 # Request headers
 headers = {
@@ -177,7 +177,7 @@ def create_contractors(n=10):
 
 if __name__ == "__main__":
     # Create 20 contractors for testing
-    create_contractors(15)
+    create_contractors(5)
 
     # For larger batches:
     # create_contractors(50)
