@@ -1,4 +1,5 @@
-# loadtest
-#it includes load testing with k6 
-#it includes python post request for different API's of jobtrek pro.
-#it includes javascript for postman to generate random data and to create profile.
+# Loadtest
+
+- It includes load testing with k6.  
+- It includes Python POST requests for different APIs of JobTrek Pro.  
+- It includes JavaScript for Postman to generate random data and create profiles.
