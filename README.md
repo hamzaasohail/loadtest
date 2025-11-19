@@ -1,4 +1,4 @@
-# Loadtest
+# Loadtest and automation scripts for jobtrekpro project
 
 - It includes load testing with k6.  
 - It includes Python POST requests for different APIs of JobTrek Pro.  
