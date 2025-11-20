@@ -15,7 +15,7 @@ export const options = {
 export function setup() {
     const loginRes = http.post(
         'https://api.jobtrekpro.com/api/auth/login',
-        JSON.stringify({ email: '17nov@yopmail.com', password: 'Orange@12' }),
+        JSON.stringify({ email: 'manualtesting@yopmail.com', password: 'Orange@12' }),
         { headers: { 'Content-Type': 'application/json' } }
     );
     check(loginRes, { 'login successful': (r) => r.status === 200 });
