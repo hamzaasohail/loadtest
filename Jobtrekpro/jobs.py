@@ -39,7 +39,7 @@ LAST_NAMES = [
 class JobConfig:
     """Configuration for job creation"""
     api_url: str = "https://api.jobtrekpro.com/api/jobs"
-    admin_token: str = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjNDFlMzg5NC0zNDUxLTRlNzEtODgyMS02MDk2NDczYjAzNmIiLCJlbWFpbCI6Im1hbnVhbHRlc3RpbmdAeW9wbWFpbC5jb20iLCJyb2xlIjoib3duZXIiLCJpYXQiOjE3NjM1NTM0MTEsImV4cCI6MTc2MzYzOTgxMX0.BXBcEbiVMyYND76r7MHNe3vWSIGOmfmYPkHn80S9v_Q"
+    admin_token: str = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJkOTFjM2Q0Zi01NTI2LTQzNDYtYmM2Ny00NmZjNjAyMWI1YTkiLCJlbWFpbCI6IjI1QHlvcG1haWwuY29tIiwicm9sZSI6Im93bmVyIiwiaWF0IjoxNzY0MDc1NzgzLCJleHAiOjE3NjQxNjIxODN9.lRKdsxfm8lbHbZ8tFP5Yx1w_nKBI3AOXpzAYjcTzIrk"
     client_id: str = "963a6018-f59e-4aea-a5b1-3bfd048ab70e"
     contractor_id: str = "f980173b-8f5a-4499-a760-cecc29ff4e11"
     rate_limit_delay: float = 0.1
@@ -219,7 +219,7 @@ def main():
     creator = JobCreator(config)
 
     # Create 5 jobs with default payload
-    creator.create_multiple_jobs(100)
+    creator.create_multiple_jobs(1)
 
 
 if __name__ == "__main__":
