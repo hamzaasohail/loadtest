@@ -219,7 +219,7 @@ def main():
     creator = JobCreator(config)
 
     # Create 5 jobs with default payload
-    creator.create_multiple_jobs(1)
+    creator.create_multiple_jobs(300)
 
 
 if __name__ == "__main__":
