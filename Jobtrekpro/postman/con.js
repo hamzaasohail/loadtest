@@ -15,7 +15,7 @@ const FIRST = [
     'Sarah', 'Jennifer', 'Lisa', 'Mary', 'Patricia', 'Linda',
     'Ahmed', 'Ali', 'Hassan', 'Fatima', 'Aisha', 'Zainab',
     'Chris', 'Daniel', 'Matthew', 'Emma', 'Olivia', 'Sophia',
-    'Illana', 'Carlos', 'Marcus', 'Elena', 'Diego', 'Isabella'
+    'Illana', 'Carlos', 'Marcus', 'Elena', 'Diego', 'Isabella', 'Nina'
 ];
 
 const LAST = [
@@ -23,7 +23,7 @@ const LAST = [
     'Miller', 'Davis', 'Rodriguez', 'Martinez', 'Hernandez',
     'Khan', 'Ahmed', 'Ali', 'Hassan', 'Malik', 'Shah',
     'Wilson', 'Moore', 'Taylor', 'Anderson', 'Thomas', 'Jackson',
-    'Dickson', 'Cooper', 'Bennett', 'Foster', 'Coleman'
+    'Dickson', 'Cooper', 'Bennett', 'Foster', 'Coleman', 'Brooks'
 ];
 
 const ADDRESSES = [
