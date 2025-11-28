@@ -5,8 +5,8 @@ import time
 # === CONFIGURATION ===
 # Your API endpoint and admin token
 API_URL = "https://api.jobtrekpro.com/api/va"
-ADMIN_TOKEN = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIyMmMyZjA2Ny03OGJhLTQ1NmQtODU2Yy1mMmMzNzc4YmNjNWUiLCJlbWFpbCI6InRlc3RAeW9wbWFpbC5jb20iLCJyb2xlIjoib3duZXIiLCJpYXQiOjE3NjMwMjkwMDQsImV4cCI6MTc2MzExNTQwNH0.ohdkrHCQS8WDSFYCkrIW7vlCFdVwZ4lttUXgf61jM8A"  # Replace with your real admin token
-BASE_EMAIL = "va@yopmail.com"  # Yopmail for temporary clients
+ADMIN_TOKEN = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJlOWIwNDk0Ny05MTdmLTQ1YzQtYWQ3NS1jNjQxZjZhZDAwMmQiLCJlbWFpbCI6Im1hcmtAeW9wbWFpbC5jb20iLCJyb2xlIjoib3duZXIiLCJpYXQiOjE3NjQzMjIzOTMsImV4cCI6MTc2NDQwODc5M30.z5hew4x8y_KYYAMSh-OcGMdBJS9nC7SMHvqBD2dV3JE"  # Replace with your real admin token
+BASE_EMAIL = "mark@yopmail.com"  # Yopmail for temporary clients
 
 # Request headers
 headers = {
