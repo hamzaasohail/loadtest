@@ -8,7 +8,9 @@ const addresses = [
     "12 Grimmauld Place",
     `4 Privet Drive`,
     "10 Downing Street",
-    "31 Spooner Street"
+    "31 Spooner Street",
+    "124 Conch Street",
+    "99 Elm Street"
 ];
 const tags = ["vip", "new", "returning", "premium", "test"];
 const colors = ["red", "blue", "green", "yellow", "purple"];
