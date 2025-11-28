@@ -4,8 +4,8 @@ import time
 # === CONFIGURATION ===
 # ← replace with your API endpoint for clients
 API_URL = "https://api.jobtrekpro.com/api/clients"
-ADMIN_TOKEN = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIzZjQyNjM2MC1jYWVkLTRmZTMtYmM1YS1iMTYxZTY0OGQ5MjMiLCJlbWFpbCI6IjI0QHlvcG1haWwuY29tIiwicm9sZSI6Im93bmVyIiwiaWF0IjoxNzYzOTY1NzkzLCJleHAiOjE3NjQwNTIxOTN9.6IhUn8IOu7JX3h55OcBCY3U-rLbQyXCwJQNg3eMesiM"  # ← replace with your real admin token
-BASE_EMAIL = "q@yopmail.com"  # Yopmail for temporary clients
+ADMIN_TOKEN = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJlOWIwNDk0Ny05MTdmLTQ1YzQtYWQ3NS1jNjQxZjZhZDAwMmQiLCJlbWFpbCI6Im1hcmtAeW9wbWFpbC5jb20iLCJyb2xlIjoib3duZXIiLCJpYXQiOjE3NjQzMjIzOTMsImV4cCI6MTc2NDQwODc5M30.z5hew4x8y_KYYAMSh-OcGMdBJS9nC7SMHvqBD2dV3JE"  # ← replace with your real admin token
+BASE_EMAIL = "mark@yopmail.com"  # Yopmail for temporary clients
 headers = {
     "Authorization": f"Bearer {ADMIN_TOKEN}",
     "Content-Type": "application/json"
