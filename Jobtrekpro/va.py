@@ -17,7 +17,8 @@ headers = {
 # Random name generation
 first_names = ["Chelsea", "Alex", "Jordan", "jordgan", "alex", "william", "ethan", "thomas", "umberto", "felix", "kevin", "brian",
                "Taylor", "Morgan", "Casey", "Riley", "Jamie"]
-last_names = ["Barber", "Smith", "Johnson", "Lee", "Brown", "Clark", "Adams"]
+last_names = ["Barber", "Smith", "Johnson", "Lee", "Brown", "Clark",
+              "Adams", "miller", "davis", "garcia", "rodriguez", "wilson", "martinez"]
 
 
 def generate_client(i):
