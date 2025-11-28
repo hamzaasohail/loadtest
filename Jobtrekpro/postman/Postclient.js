@@ -5,7 +5,10 @@ const addresses = [
     "1313 Mockingbird Lane",
     "221B Baker Street",
     "1600 Pennsylvania Ave",
-    "12 Grimmauld Place"
+    "12 Grimmauld Place",
+    `4 Privet Drive`,
+    "10 Downing Street",
+    "31 Spooner Street"
 ];
 const tags = ["vip", "new", "returning", "premium", "test"];
 const colors = ["red", "blue", "green", "yellow", "purple"];
