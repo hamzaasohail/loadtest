@@ -8,8 +8,8 @@ const lastNames = ["Smith", "Johnson", "Brown", "Taylor", "Williams", "Davis", "
 let last = lastNames[Math.floor(Math.random() * lastNames.length)];
 pm.collectionVariables.set("last", last);
 
-// --- RANDOM YOPMAIL EMAIL ---
-let yop = `${first.toLowerCase()}.${last.toLowerCase()}${Math.floor(Math.random() * 1000)}@yopmail.com`;
+// --- YOPMAIL EMAIL WITHOUT NUMBERS ---
+let yop = `${first.toLowerCase()}.${last.toLowerCase()}@yopmail.com`;
 pm.collectionVariables.set("email", yop);
 
 // --- Random Phone Number ---
@@ -19,3 +19,11 @@ pm.collectionVariables.set(
 );
 
 console.log("Generated:", pm.collectionVariables.toObject());
+/* Example body json
+
+{
+    "first_name": "{{first}}",
+    "last_name": "{{last}}",
+    "email": "{{email}}",
+    "mobile_number": "{{mobile_number}}"
+} */
