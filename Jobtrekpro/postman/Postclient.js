@@ -1,30 +1,31 @@
-const firstNames = ["John", "Emily", "Lucas", "Sofia", "Daniel", "Ava", "Michael"];
-const lastNames = ["Smith", "Johnson", "Brown", "Taylor", "Williams", "Davis", "Miller"];
-const addresses = [
-    "742 Evergreen Terrace",
-    "1313 Mockingbird Lane",
-    "221B Baker Street",
-    "1600 Pennsylvania Ave",
-    "12 Grimmauld Place",
-    `4 Privet Drive`,
-    "10 Downing Street",
-    "31 Spooner Street",
-    "124 Conch Street",
-    "99 Elm Street"
-];
-const tags = ["vip", "new", "returning", "premium", "test"];
-const colors = ["red", "blue", "green", "yellow", "purple"];
+// Generate random name
+const names = ['john', 'jane', 'mike', 'sarah', 'david', 'emma', 'chris', 'lisa', 'tom', 'anna', 'alex', 'sam', 'jordan', 'taylor', 'morgan'];
+const randomName = names[Math.floor(Math.random() * names.length)];
 
-// Generate random data
-let first = firstNames[Math.floor(Math.random() * firstNames.length)];
-let last = lastNames[Math.floor(Math.random() * lastNames.length)];
+// Generate random email (same as name)
+const randomEmail = randomName + '@yopmail.com';
 
-pm.collectionVariables.set("first", first);
-pm.collectionVariables.set("last", last);
-pm.collectionVariables.set("email", `${first.toLowerCase()}.${last.toLowerCase()}@example.com`);
-pm.collectionVariables.set("phone", `+1 (800) ${Math.floor(1000000 + Math.random() * 9000000)}`);
-pm.collectionVariables.set("address", addresses[Math.floor(Math.random() * addresses.length)]);
-pm.collectionVariables.set("selected_tag", tags[Math.floor(Math.random() * tags.length)]);
-pm.collectionVariables.set("selected_color", colors[Math.floor(Math.random() * colors.length)]);
+// Generate random phone
+const randomPhone = '+1 ' + Math.floor(Math.random() * 900 + 100) + ' ' + Math.floor(Math.random() * 900 + 100) + ' ' + Math.floor(Math.random() * 9000 + 1000);
 
-console.log("Generated Variables:", pm.collectionVariables.toObject());
+// Generate random address
+const streets = ['Main St', 'Oak Ave', 'Pine Rd', 'Maple Dr', 'Cedar Ln', 'Elm St', 'Park Ave', 'Lake Rd'];
+const randomAddress = Math.floor(Math.random() * 9999 + 1) + ' ' + streets[Math.floor(Math.random() * streets.length)];
+
+// Set environment variables
+pm.environment.set('name', randomName);
+pm.environment.set('email', randomEmail);
+pm.environment.set('phone', randomPhone);
+pm.environment.set('address', randomAddress);
+
+/* body json
+
+{
+    "name": "{{name}}",
+    "email": "{{email}}",
+    "phone": "{{phone}}",
+    "address": "{{address}}",
+    "tagIds": [
+        "42777115-6f69-4f52-b22f-9473ea2c0af9"
+    ]
+} */
